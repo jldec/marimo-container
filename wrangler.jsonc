@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "container-demo-terminal",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-11-05",
+  "observability": {
+    "enabled": true
+  },
+  "containers": [
+    {
+      "class_name": "ContainerClass",
+      "image": "./Dockerfile"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "ContainerClass",
+        "name": "CONTAINER_DO"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "new_sqlite_classes": ["ContainerClass"],
+      "tag": "v1"
+    }
+  ]
+}
