@@ -8,7 +8,9 @@
     "test": "tsc && prettier --check .",
     "format": "prettier --write .",
     "types": "wrangler types --include-runtime false --strict-vars false",
-    "tail": "wrangler tail"
+    "tail": "wrangler tail",
+    "image:build": "docker build --platform linux/amd64 -t container-demo-terminal .",
+    "image:run": "docker run --rm -p 8080:8080 container-demo-terminal"
   },
   "devDependencies": {
     "@cloudflare/containers": "^0.0.30",

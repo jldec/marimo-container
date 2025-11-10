@@ -3,24 +3,24 @@ Minimal demo of a Cloudflare Container using [tty2web](https://github.com/kost/t
 
 Deployed at https://container-demo-terminal.jldec.workers.dev
 
-<img width="1458" height="608" alt="Screenshot 2025-11-09 at 23 40 15" src="https://github.com/user-attachments/assets/e0e3eccd-9b9e-4910-8d09-2e5bbe879a2b" />
-
-### To try out the container in Docker Desktop
-This builds a linux/amd64 docker image called `term1`. Docker Desktop on macOS with apple silicon can run it using x86 emulation. Open the terminal in your browser at https://localhost:8080
-
-```sh
-make build
-make run
-```
-
 ### To run locally using wrangler
-Wrangler will build a new image (also targeting linux/amd64). Open in your browser at https://localhost:8787
+Wrangler will build a new image targeting linux/amd64. Open in your browser at https://localhost:8787
 ```sh
 pnpm dev
 ```
 
 ### To deploy to Cloudflare
+This is not required after you link your Worker to a git repository for automated deploys.
 ```sh
 pnpm ship
+```
+
+### To run the container
+This builds a linux/amd64 docker image called `term1`.
+
+Docker Desktop on macOS with apple silicon can run x86 containers using rosetta emulation.
+```sh
+pnpm image:build
+pnpm image:run
 ```
 
