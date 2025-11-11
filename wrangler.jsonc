@@ -9,7 +9,8 @@
   "containers": [
     {
       "class_name": "ContainerClass",
-      "image": "./Dockerfile"
+      "image": "./Dockerfile",
+      "max_instances": 3
     }
   ],
   "durable_objects": {
