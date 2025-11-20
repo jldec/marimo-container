@@ -5,4 +5,4 @@ WORKDIR /app
 
 COPY rgb-sliders.py /app
 
-CMD ["marimo", "edit", "--no-token", "-p", "8080", "--host", "0.0.0.0"]
+CMD ["marimo", "edit", "--headless", "--no-token", "-p", "8080", "--host", "0.0.0.0"]
