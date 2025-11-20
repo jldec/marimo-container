@@ -1,7 +1,7 @@
 .PHONY: build run
 
 build:
-	docker build --platform linux/amd64 -t container-demo-terminal .
+	docker build --platform linux/amd64 -t marimo-container .
 
 run:
-	docker run --rm -p 8080:8080 container-demo-terminal
+	docker run --rm -p 8080:8080 marimo-container

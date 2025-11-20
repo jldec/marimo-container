@@ -7,10 +7,7 @@ export class ContainerClass extends Container {
 
 export default {
   async fetch(req: Request, env: Env) {
-    const url = new URL(req.url)
-    const id = url.searchParams.get('id')
-    const containerID = 'container-id' + (id ? `-${id}` : '')
-    const container = getContainer(env.CONTAINER_DO, containerID)
+    const container = getContainer(env.CONTAINER_DO, 'container-id')
     return container.fetch(req)
   }
 }
