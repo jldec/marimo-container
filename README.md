@@ -2,8 +2,6 @@
 Personal Cloudflare Container for running [marimo notebooks](https://marimo.io)
 Deployed at https://marimo-container.jldec.workers.dev
 
-Based on https://github.com/jldec/container-demo-terminal
-
 ### To run locally using wrangler
 Ensure that Docker Desktop is running. Wrangler will build a new image targeting linux/amd64. Open in your browser at https://localhost:8787
 ```sh
